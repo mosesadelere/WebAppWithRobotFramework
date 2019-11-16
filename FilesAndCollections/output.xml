@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2a1 (Python 3.7.0 on win32)" generated="20191116 11:17:33.106" rpa="false">
+<suite id="s1" name="FilesAndCollections" source="C:\Users\moses\eclipse-workspace\FilesAndCollections">
+<suite id="s1-s1" name="Appium" source="C:\Users\moses\eclipse-workspace\FilesAndCollections\Appium">
+<suite id="s1-s1-s1" name="Registration" source="C:\Users\moses\eclipse-workspace\FilesAndCollections\Appium\Registration.robot">
+<test id="s1-s1-s1-t1" name="Registration Test">
+<kw name="Launch browser" library="RegistrationKeywords">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20191116 11:17:36.392" level="INFO">Opening browser 'firefox' to base url 'http://www.newtours.demoaut.com/'.</msg>
+<msg timestamp="20191116 11:17:36.522" level="INFO">Firefox driver log is always forced to to: C:\Users\moses\eclipse-workspace\FilesAndCollections\geckodriver-208.log</msg>
+<status status="PASS" starttime="20191116 11:17:36.391" endtime="20191116 11:18:46.667"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:17:36.390" endtime="20191116 11:18:46.667"></status>
+</kw>
+<kw name="Click Register Link" library="RegistrationKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${link_Reg}</arg>
+</arguments>
+<msg timestamp="20191116 11:18:46.670" level="INFO">Clicking link 'link:REGISTER'.</msg>
+<status status="PASS" starttime="20191116 11:18:46.668" endtime="20191116 11:18:48.925"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:46.668" endtime="20191116 11:18:48.925"></status>
+</kw>
+<kw name="Enter Firstname" library="RegistrationKeywords">
+<arguments>
+<arg>Baby</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_firstName}</arg>
+<arg>${firstName}</arg>
+</arguments>
+<msg timestamp="20191116 11:18:48.927" level="INFO">Typing text 'Baby' into text field 'name:firstName'.</msg>
+<status status="PASS" starttime="20191116 11:18:48.926" endtime="20191116 11:18:49.124"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:48.925" endtime="20191116 11:18:49.124"></status>
+</kw>
+<kw name="Enter Lastname" library="RegistrationKeywords">
+<arguments>
+<arg>John</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_lastName}</arg>
+<arg>${lastName}</arg>
+</arguments>
+<msg timestamp="20191116 11:18:49.126" level="INFO">Typing text 'John' into text field 'name:lastName'.</msg>
+<status status="PASS" starttime="20191116 11:18:49.125" endtime="20191116 11:18:49.172"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:49.125" endtime="20191116 11:18:49.173"></status>
+</kw>
+<kw name="Enter Phone" library="RegistrationKeywords">
+<arguments>
+<arg>01234456789</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_phone}</arg>
+<arg>${phone}</arg>
+</arguments>
+<msg timestamp="20191116 11:18:49.174" level="INFO">Typing text '01234456789' into text field 'name:phone'.</msg>
+<status status="PASS" starttime="20191116 11:18:49.174" endtime="20191116 11:18:49.214"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:49.173" endtime="20191116 11:18:49.214"></status>
+</kw>
+<kw name="Enter Email" library="RegistrationKeywords">
+<arguments>
+<arg>babyjohn@gmail.com</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_email}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20191116 11:18:49.216" level="INFO">Typing text 'babyjohn@gmail.com' into text field 'name:userName'.</msg>
+<status status="PASS" starttime="20191116 11:18:49.215" endtime="20191116 11:18:49.281"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:49.214" endtime="20191116 11:18:49.282"></status>
+</kw>
+<kw name="Enter Address1" library="RegistrationKeywords">
+<arguments>
+<arg>Toronto</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_add1}</arg>
+<arg>${add1}</arg>
+</arguments>
+<msg timestamp="20191116 11:18:49.283" level="INFO">Typing text 'Toronto' into text field 'name:address1'.</msg>
+<status status="PASS" starttime="20191116 11:18:49.283" endtime="20191116 11:18:49.429"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:49.282" endtime="20191116 11:18:49.429"></status>
+</kw>
+<kw name="Enter Address2" library="RegistrationKeywords">
+<arguments>
+<arg>Canada</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_add2}</arg>
+<arg>${add2}</arg>
+</arguments>
+<msg timestamp="20191116 11:18:49.430" level="INFO">Typing text 'Canada' into text field 'name:address2'.</msg>
+<status status="PASS" starttime="20191116 11:18:49.430" endtime="20191116 11:18:49.466"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:49.429" endtime="20191116 11:18:49.467"></status>
+</kw>
+<kw name="Enter City" library="RegistrationKeywords">
+<arguments>
+<arg>Toronto</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_city}</arg>
+<arg>${city}</arg>
+</arguments>
+<msg timestamp="20191116 11:18:49.468" level="INFO">Typing text 'Toronto' into text field 'name:city'.</msg>
+<status status="PASS" starttime="20191116 11:18:49.468" endtime="20191116 11:18:49.528"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:49.467" endtime="20191116 11:18:49.528"></status>
+</kw>
+<kw name="Enter State" library="RegistrationKeywords">
+<arguments>
+<arg>Brampton</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_state}</arg>
+<arg>${state}</arg>
+</arguments>
+<msg timestamp="20191116 11:18:49.529" level="INFO">Typing text 'Brampton' into text field 'name:state'.</msg>
+<status status="PASS" starttime="20191116 11:18:49.529" endtime="20191116 11:18:49.599"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:49.528" endtime="20191116 11:18:49.599"></status>
+</kw>
+<kw name="Enter Postal Code" library="RegistrationKeywords">
+<arguments>
+<arg>l3s 1e7</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_postCode}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<msg timestamp="20191116 11:18:49.601" level="INFO">Typing text 'l3s 1e7' into text field 'name:postalCode'.</msg>
+<status status="PASS" starttime="20191116 11:18:49.600" endtime="20191116 11:18:49.638"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:49.599" endtime="20191116 11:18:49.638"></status>
+</kw>
+<kw name="Select Country" library="RegistrationKeywords">
+<arguments>
+<arg>CANADA</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${drp_country}</arg>
+<arg>${country}</arg>
+</arguments>
+<msg timestamp="20191116 11:18:49.640" level="INFO">Selecting options from selection list 'name:country' by label CANADA.</msg>
+<status status="PASS" starttime="20191116 11:18:49.639" endtime="20191116 11:18:49.959"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:49.639" endtime="20191116 11:18:49.959"></status>
+</kw>
+<kw name="Enter Username" library="RegistrationKeywords">
+<arguments>
+<arg>babyjohnxyz</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_userName}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20191116 11:18:49.961" level="INFO">Typing text 'babyjohnxyz' into text field 'name:email'.</msg>
+<status status="PASS" starttime="20191116 11:18:49.960" endtime="20191116 11:18:49.989"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:49.960" endtime="20191116 11:18:49.990"></status>
+</kw>
+<kw name="Enter Password" library="RegistrationKeywords">
+<arguments>
+<arg>babyjohnxyz</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_Password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20191116 11:18:49.991" level="INFO">Typing text 'babyjohnxyz' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20191116 11:18:49.990" endtime="20191116 11:18:50.022"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:49.990" endtime="20191116 11:18:50.022"></status>
+</kw>
+<kw name="Enter Confirmed Password" library="RegistrationKeywords">
+<arguments>
+<arg>babyjohnxyz</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_conformedPasswords}</arg>
+<arg>${confpassword}</arg>
+</arguments>
+<msg timestamp="20191116 11:18:50.023" level="INFO">Typing text 'babyjohnxyz' into text field 'name:confirmPassword'.</msg>
+<status status="PASS" starttime="20191116 11:18:50.023" endtime="20191116 11:18:50.054"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:50.022" endtime="20191116 11:18:50.054"></status>
+</kw>
+<kw name="Click Submit" library="RegistrationKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_submit}</arg>
+</arguments>
+<msg timestamp="20191116 11:18:50.055" level="INFO">Clicking button 'xpath://input[@name='register']'.</msg>
+<status status="PASS" starttime="20191116 11:18:50.055" endtime="20191116 11:18:51.967"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:50.054" endtime="20191116 11:18:51.968"></status>
+</kw>
+<kw name="Verify Successful Registration" library="RegistrationKeywords">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Thank you for registering</arg>
+</arguments>
+<msg timestamp="20191116 11:18:52.039" level="INFO">Current page contains text 'Thank you for registering'.</msg>
+<status status="PASS" starttime="20191116 11:18:51.968" endtime="20191116 11:18:52.039"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:51.968" endtime="20191116 11:18:52.039"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:17:36.389" endtime="20191116 11:18:52.040" critical="yes"></status>
+</test>
+<kw name="close my browsers" library="RegistrationKeywords" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20191116 11:18:52.042" endtime="20191116 11:18:57.393"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:18:52.041" endtime="20191116 11:18:57.393"></status>
+</kw>
+<status status="PASS" starttime="20191116 11:17:33.271" endtime="20191116 11:18:57.393"></status>
+</suite>
+<status status="PASS" starttime="20191116 11:17:33.267" endtime="20191116 11:18:57.396"></status>
+</suite>
+<status status="PASS" starttime="20191116 11:17:33.206" endtime="20191116 11:18:57.398"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="FilesAndCollections">FilesAndCollections</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Appium">FilesAndCollections.Appium</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="Registration">FilesAndCollections.Appium.Registration</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20191116 11:17:33.186" level="ERROR">Taking listener 'C:\Users\moses\AppData\Local\Temp\RobotTempDir3174063131592160939\TestRunnerAgent.py:51019' into use failed: Importing listener 'C:\Users\moses\AppData\Local\Temp\RobotTempDir3174063131592160939\TestRunnerAgent.py' failed: ModuleNotFoundError: No module named 'robot.parsing.populators'
+Traceback (most recent call last):
+  File "C:\Users\moses\AppData\Local\Temp\RobotTempDir3174063131592160939\TestRunnerAgent.py", line 72, in &lt;module&gt;
+    from robot.parsing.populators import READERS
+PYTHONPATH:
+  C:\Python37\Lib\site-packages
+  C:\Users\moses\eclipse-workspace\FilesAndCollections
+  C:\Python37\python37.zip
+  C:\Python37\DLLs
+  C:\Python37\lib
+  C:\Python37
+  C:\Users\moses\AppData\Roaming\Python\Python37\site-packages
+  C:\Python37\lib\site-packages
+  C:\Python37\lib\site-packages\win32
+  C:\Python37\lib\site-packages\win32\lib
+  C:\Python37\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>
