@@ -21,7 +21,7 @@ Click SignIN
     Click Button    ${btn_signIn}    
     
 Verify Successful Login
-    Title Should Be    Find a Flight: Mercury Tours:    
+    Title Should Be    Welcome: Mercury Tours    
     
 Close my browser
     Close All Browsers
