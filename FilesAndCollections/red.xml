@@ -6,6 +6,10 @@
     <referencedLibrary type="PYTHON" name="AppiumLibrary" path="C:/Python37/Lib/site-packages/AppiumLibrary/__init__.py" dynamic="false"/>
     <referencedLibrary type="PYTHON" name="DataDriver" path="C:/Python37/Lib/site-packages/DataDriver/__init__.py" dynamic="false"/>
     <referencedLibrary type="PYTHON" name="DatabaseLibrary" path="C:/Python37/Lib/site-packages/DatabaseLibrary/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="JenkinsLibrary" path="C:/Python37/Lib/site-packages/JenkinsLibrary/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="RequestsLibrary" path="C:/Python37/Lib/site-packages/RequestsLibrary/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="AutoItLibrary" path="C:/Python37/Lib/site-packages/AutoItLibrary/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="commands" path="FilesAndCollections/EmbeddedTesting/commands.py" dynamic="false"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>
