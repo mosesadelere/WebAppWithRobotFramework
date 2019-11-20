@@ -1,0 +1,21 @@
+{
+  "firstname": "Moses",
+  "lastname": "Adelere",
+  "age": 35,
+  "address": {
+    "streetname": "Teeriniemenkatu 16",
+    "city": "Vaasa",
+    "postcode": 65320
+  },
+  "phone": [
+    {
+      "type": "Mobile",
+      "Finnishline": "+358445020640",
+      "UKline": "+447402639844"
+    },
+    {
+      "type": "fax",
+      "number": "123-456-7890"
+    }
+  ]
+}

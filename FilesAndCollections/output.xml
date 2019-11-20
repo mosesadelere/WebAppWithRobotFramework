@@ -1,80 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.2 (Python 3.7.0 on win32)" generated="20191119 00:08:32.923">
+<robot generator="Robot 3.0.2 (Python 3.7.0 on win32)" generated="20191120 17:08:27.820">
 <suite id="s1" name="FilesAndCollections" source="C:\Users\moses\git\WebAppWithRobotFramework\FilesAndCollections">
-<suite id="s1-s1" name="DesktopApp" source="C:\Users\moses\git\WebAppWithRobotFramework\FilesAndCollections\DesktopApp">
-<suite id="s1-s1-s1" name="firstTest" source="C:\Users\moses\git\WebAppWithRobotFramework\FilesAndCollections\DesktopApp\firstTest.robot">
-<test id="s1-s1-s1-t1" name="APP Testing">
-<kw name="Run" library="AutoItLibrary">
-<doc>Direct wrapper for AutoIt's Run method.</doc>
+<suite id="s1-s1" name="APITesting" source="C:\Users\moses\git\WebAppWithRobotFramework\FilesAndCollections\APITesting">
+<suite id="s1-s1-s1" name="complexJsonValidation" source="C:\Users\moses\git\WebAppWithRobotFramework\FilesAndCollections\APITesting\complexJsonValidation.robot">
+<test id="s1-s1-s1-t1" name="Get country info">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
 <arguments>
-<arg>${Notepad}</arg>
+<arg>mysesion</arg>
+<arg>${url}</arg>
 </arguments>
-<msg timestamp="20191119 00:08:33.190" level="INFO">AutoItLibrary.Run(FileName='C:\Program Files\Notepad++\notepad++.exe', WorkingDir='', Flag='')</msg>
-<status status="PASS" starttime="20191119 00:08:33.186" endtime="20191119 00:08:33.191"></status>
+<msg timestamp="20191120 17:08:28.564" level="INFO">Creating Session using : alias=mysesion, url=https://restcountries.eu, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20191120 17:08:28.563" endtime="20191120 17:08:28.565"></status>
 </kw>
-<kw name="Win Wait Active" library="AutoItLibrary">
-<doc>Direct wrapper for AutoIt's WinWaitActive method.</doc>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
 <arguments>
-<arg>new 1 - Notepad++</arg>
+<arg>mysesion</arg>
+<arg>/rest/v2/alpha/NG</arg>
 </arguments>
-<msg timestamp="20191119 00:08:33.727" level="INFO">AutoItLibrary.WinWaitActive(WindowTitle='new 1 - Notepad++', WindowText='', TimeOut=60)</msg>
-<status status="PASS" starttime="20191119 00:08:33.191" endtime="20191119 00:08:33.730"></status>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20191120 17:08:28.567" level="INFO">GET Request using : uri=/rest/v2/alpha/NG, params=None, allow_redirects=True, timeout=None
+headers={'User-Agent': 'python-requests/2.18.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+data=None 
+json=None</msg>
+<msg timestamp="20191120 17:08:28.844" level="INFO">C:\Python37\Lib\site-packages\urllib3\connectionpool.py:858: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)</msg>
+<msg timestamp="20191120 17:08:28.844" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20191120 17:08:28.566" endtime="20191120 17:08:28.844"></status>
 </kw>
-<kw name="Send" library="AutoItLibrary">
-<doc>method Send</doc>
+<kw name="To Json" library="RequestsLibrary">
+<doc>Convert a string to a JSON object</doc>
 <arguments>
-<arg>Hello from my first desktop testing.. This is just a test.</arg>
+<arg>${response.content}</arg>
 </arguments>
-<status status="PASS" starttime="20191119 00:08:33.731" endtime="20191119 00:08:34.411"></status>
+<assign>
+<var>${json_object}</var>
+</assign>
+<msg timestamp="20191120 17:08:28.846" level="INFO">To JSON using : content={"name":"Nigeria","topLevelDomain":[".ng"],"alpha2Code":"NG","alpha3Code":"NGA","callingCodes":["234"],"capital":"Abuja","altSpellings":["NG","Nijeriya","Naíjíríà","Federal Republic of Nigeria"],"region":"Africa","subregion":"Western Africa","population":186988000,"latlng":[10.0,8.0],"demonym":"Nigerian","area":923768.0,"gini":48.8,"timezones":["UTC+01:00"],"borders":["BEN","CMR","TCD","NER"],"nativeName":"Nigeria","numericCode":"566","currencies":[{"code":"NGN","name":"Nigerian naira","symbol":"₦"}],"languages":[{"iso639_1":"en","iso639_2":"eng","name":"English","nativeName":"English"}],"translations":{"de":"Nigeria","es":"Nigeria","fr":"Nigéria","ja":"ナイジェリア","it":"Nigeria","br":"Nigéria","pt":"Nigéria","nl":"Nigeria","hr":"Nigerija","fa":"نیجریه"},"flag":"https://restcountries.eu/data/nga.svg","regionalBlocs":[{"acronym":"AU","name":"African Union","otherAcronyms":[],"otherNames":["الاتحاد الأفريقي","Union africaine","União Africana","Unión Africana","Umoja wa Afrika"]}],"cioc":"NGR"} </msg>
+<msg timestamp="20191120 17:08:28.846" level="INFO">To JSON using : pretty_print=False </msg>
+<msg timestamp="20191120 17:08:28.846" level="INFO">${json_object} = {'name': 'Nigeria', 'topLevelDomain': ['.ng'], 'alpha2Code': 'NG', 'alpha3Code': 'NGA', 'callingCodes': ['234'], 'capital': 'Abuja', 'altSpellings': ['NG', 'Nijeriya', 'Naíjíríà', 'Federal Republic of...</msg>
+<status status="PASS" starttime="20191120 17:08:28.845" endtime="20191120 17:08:28.846"></status>
 </kw>
-<status status="PASS" starttime="20191119 00:08:33.185" endtime="20191119 00:08:34.412" critical="yes"></status>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json_object}</arg>
+<arg>$.name</arg>
+</arguments>
+<assign>
+<var>${country_name}</var>
+</assign>
+<msg timestamp="20191120 17:08:28.903" level="INFO">${country_name} = ['Nigeria']</msg>
+<status status="PASS" starttime="20191120 17:08:28.847" endtime="20191120 17:08:28.903"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${country_name[0]}</arg>
+</arguments>
+<status status="PASS" starttime="20191120 17:08:28.904" endtime="20191120 17:08:28.905"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${country_name[0]}</arg>
+<arg>Nigeria</arg>
+</arguments>
+<status status="PASS" starttime="20191120 17:08:28.905" endtime="20191120 17:08:28.906"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json_object}</arg>
+<arg>$.altSpellings[1]</arg>
+</arguments>
+<assign>
+<var>${alt_spelling}</var>
+</assign>
+<msg timestamp="20191120 17:08:28.955" level="INFO">${alt_spelling} = ['Nijeriya']</msg>
+<status status="PASS" starttime="20191120 17:08:28.907" endtime="20191120 17:08:28.955"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${alt_spelling[0]}</arg>
+</arguments>
+<status status="PASS" starttime="20191120 17:08:28.956" endtime="20191120 17:08:28.956"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${alt_spelling[0]}</arg>
+<arg>Nijeriya</arg>
+</arguments>
+<status status="PASS" starttime="20191120 17:08:28.957" endtime="20191120 17:08:28.958"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json_object}</arg>
+<arg>$.altSpellings</arg>
+</arguments>
+<assign>
+<var>${alt_spellings}</var>
+</assign>
+<msg timestamp="20191120 17:08:29.006" level="INFO">${alt_spellings} = [['NG', 'Nijeriya', 'Naíjíríà', 'Federal Republic of Nigeria']]</msg>
+<status status="PASS" starttime="20191120 17:08:28.958" endtime="20191120 17:08:29.007"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${alt_spellings[0]}</arg>
+</arguments>
+<status status="PASS" starttime="20191120 17:08:29.007" endtime="20191120 17:08:29.008"></status>
+</kw>
+<kw name="Should Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` does not contain any of the ``*items``.</doc>
+<arguments>
+<arg>${alt_spellings[0]}</arg>
+<arg>NG</arg>
+<arg>Nijeriya</arg>
+<arg>Federal Republic of Nigeria</arg>
+</arguments>
+<status status="PASS" starttime="20191120 17:08:29.009" endtime="20191120 17:08:29.010"></status>
+</kw>
+<status status="PASS" starttime="20191120 17:08:28.562" endtime="20191120 17:08:29.011" critical="yes"></status>
 </test>
-<test id="s1-s1-s1-t2" name="Start Calculation">
-<kw name="Run" library="AutoItLibrary">
-<doc>Direct wrapper for AutoIt's Run method.</doc>
-<arguments>
-<arg>calc.exe</arg>
-</arguments>
-<msg timestamp="20191119 00:08:34.417" level="INFO">AutoItLibrary.Run(FileName='calc.exe', WorkingDir='', Flag='')</msg>
-<status status="PASS" starttime="20191119 00:08:34.414" endtime="20191119 00:08:34.417"></status>
-</kw>
-<kw name="Wait For Active Window" library="AutoItLibrary">
-<doc>Wait up to _TimeOut_ seconds for the window with the given _WindowTitle_ and optional</doc>
-<arguments>
-<arg>Calculator</arg>
-</arguments>
-<msg timestamp="20191119 00:08:34.980" level="INFO">AutoItLibrary.WaitForActiveWindow(WindowTitle='Calculator', WindowText='', TimeOut=-1)</msg>
-<msg timestamp="20191119 00:08:34.980" level="INFO">AutoItLibrary.WinWait(WindowTitle='Calculator', WindowText='', TimeOut=60)</msg>
-<msg timestamp="20191119 00:08:34.980" level="INFO">AutoItLibrary.WinWaitActive(WindowTitle='Calculator', WindowText='', TimeOut=60)</msg>
-<status status="PASS" starttime="20191119 00:08:34.418" endtime="20191119 00:08:34.981"></status>
-</kw>
-<kw name="Win Menu Select Item" library="AutoItLibrary">
-<doc>method WinMenuSelectItem</doc>
-<arguments>
-<arg>None</arg>
-</arguments>
-<msg timestamp="20191119 00:08:34.988" level="FAIL">com_error: (-2147352561, 'Parameter not optional.', None, None)</msg>
-<status status="FAIL" starttime="20191119 00:08:34.982" endtime="20191119 00:08:34.989"></status>
-</kw>
-<status status="FAIL" starttime="20191119 00:08:34.413" endtime="20191119 00:08:34.990" critical="yes">com_error: (-2147352561, 'Parameter not optional.', None, None)</status>
-</test>
-<status status="FAIL" starttime="20191119 00:08:33.061" endtime="20191119 00:08:34.995"></status>
+<status status="PASS" starttime="20191120 17:08:27.930" endtime="20191120 17:08:29.015"></status>
 </suite>
-<status status="FAIL" starttime="20191119 00:08:33.056" endtime="20191119 00:08:35.001"></status>
+<status status="PASS" starttime="20191120 17:08:27.926" endtime="20191120 17:08:29.019"></status>
 </suite>
-<status status="FAIL" starttime="20191119 00:08:33.004" endtime="20191119 00:08:35.009"></status>
+<status status="PASS" starttime="20191120 17:08:27.883" endtime="20191120 17:08:29.022"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1">Critical Tests</stat>
-<stat pass="1" fail="1">All Tests</stat>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="1" id="s1" name="FilesAndCollections">FilesAndCollections</stat>
-<stat pass="1" fail="1" id="s1-s1" name="DesktopApp">FilesAndCollections.DesktopApp</stat>
-<stat pass="1" fail="1" id="s1-s1-s1" name="firstTest">FilesAndCollections.DesktopApp.firstTest</stat>
+<stat pass="1" fail="0" id="s1" name="FilesAndCollections">FilesAndCollections</stat>
+<stat pass="1" fail="0" id="s1-s1" name="APITesting">FilesAndCollections.APITesting</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="complexJsonValidation">FilesAndCollections.APITesting.complexJsonValidation</stat>
 </suite>
 </statistics>
 <errors>
